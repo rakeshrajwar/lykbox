@@ -1,0 +1,9 @@
+<div>
+<% @updates.each do |update| %>
+<%= update.text%>
+ <%= link_to 'Destroy', update, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+</div>
+
+
+

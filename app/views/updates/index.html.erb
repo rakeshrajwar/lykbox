@@ -1,0 +1,32 @@
+ <br />
+ <%= form_for(@update) do |f| %>
+  <% if @update.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@update.errors.count, "error") %> prohibited this update from being saved:</h2>
+
+      <ul>
+      <% @update.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+  <div class= "updatebox" >
+    <h1><%= f.label :'What is in your mind ?' %></h1><br />
+    <%= f.text_area :text, :rows=>3, :cols=>80, :placeholder => "Enter your words."%>
+  </div>
+   
+  <div class = "updatebox" >
+    <%= f.submit "Share" %>
+  </div>
+<% end %><br />
+
+<div class ='comments-row'>
+<% @updates.each do |update| %>
+<%= update.text%>
+<%= link_to 'Delete', update, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+  <%end%>
+</div>
+

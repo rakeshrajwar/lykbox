@@ -1,0 +1,11 @@
+// Place all the styles related to the updates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.updatebox input[type="submit"] {color: #fff; font-size: 13px; border: 0; background: #14ad9b; padding: 5px 22px;}
+
+.updatebox input[type="submit"]:hover {opacity: 0.9;}
+
+.updatebox textarea {padding: 10px 10px 5px; border: 1px solid #d7d7d7; margin-bottom: 10px;}
+
